@@ -1,0 +1,477 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+.header-top {
+  padding: 2vw;
+  width: 100%;
+  height: 55px;
+  background-color: #151028;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-wrapper-logo img {
+  max-width: 90px;
+}
+
+.header-top-wrapper-nav {
+  min-width: 35vw;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-wrapper-nav-wrapper {
+  background-color: #110D20;
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  padding: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.header-top-wrapper-nav-wrapper .link {
+  height: 100%;
+  min-width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #231D47;
+  padding: 1vw;
+  margin: 1vw;
+  border-radius: 7px;
+}
+
+.header-top-wrapper-nav-wrapper .link div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-wrapper-nav-wrapper .link div svg {
+  width: 15px;
+  height: 15px;
+  color: #948AC5;
+}
+
+.header-top-wrapper-nav-wrapper_money {
+  height: 100%;
+  min-width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+}
+
+.header-top-wrapper-nav-wrapper_money-icon {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-top-wrapper-nav-wrapper_money-icon svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.header-top-wrapper-nav-wrapper_money-money {
+  margin: 2vw;
+}
+
+.header-top-wrapper-nav-wrapper_money-money p {
+  font-variant-numeric: tabular-nums;
+  font-family: Manrope;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: -0.08px;
+  color: #fafafa;
+}
+
+.header-bottom {
+  border: 1px solid #261c4a;
+  padding: 2vw;
+  width: 100%;
+  height: 55px;
+  background-color: #151028;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fafafa;
+}
+
+.header-bottom-wrapper {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-bottom-wrapper-scores {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+.header-bottom-wrapper-scores-last {
+  font-weight: bold;
+  min-width: 58px;
+  height: 26px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 0px 9px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: -0.0023em;
+  color: #fafafa;
+  border-radius: 7px;
+  background: #3e5bc2;
+  margin: 1vw;
+}
+
+.header-bottom-under {
+  border: 1px solid #261c4a;
+  width: 100%;
+  height: 55px;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(17, 17, 17, 0)), to(#151028));
+  background: linear-gradient(to right, rgba(17, 17, 17, 0), #151028);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-bottom-under_button {
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #100C1F;
+  padding: 0.8vw;
+  margin: 2vw;
+  border-radius: 7px;
+}
+
+.header-bottom-under_button div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 7px;
+  background-color: #231D47;
+}
+
+.header-bottom-under_button div svg {
+  width: 15px;
+  height: 15px;
+  color: #948AC5;
+}
+
+.game {
+  background-color: #151028;
+}
+
+.game-wrapper {
+  color: white;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: inherit;
+  height: 208px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  z-index: 970;
+  pointer-events: none;
+}
+
+.game-wrapper-wrapper {
+  color: white;
+  pointer-events: none;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #261c4a;
+  height: 208px;
+  -webkit-transition: height 0.32s ease 0s;
+  transition: height 0.32s ease 0s;
+  border-radius: 12px;
+  background: #151028;
+}
+
+.game-wrapper-wrapper-canvas {
+  opacity: 1;
+  -webkit-transition: all 0.32s ease 0s;
+  transition: all 0.32s ease 0s;
+}
+
+.game-wrapper-wrapper-canvas_background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(https://lucky-jet.1play.one/assets/media/ff4e62960d80d8105f6ea4eaa979884d.png) 0% 0%/contain repeat-x;
+  background-repeat: repeat-x;
+  -webkit-animation: 370370s linear 0s infinite normal none paused gKBsdr;
+          animation: 370370s linear 0s infinite normal none paused gKBsdr;
+}
+
+.game-wrapper-wrapper-canvas_bottom {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  bottom: -35px;
+  opacity: 1;
+  background: url(https://lucky-jet.1play.one/assets/media/86e9cddf78b8061081ecdae04d9d15e9.svg) 0%/contain repeat-x;
+  -webkit-animation: 37037s linear 0s infinite normal none paused gKBsdr;
+          animation: 37037s linear 0s infinite normal none paused gKBsdr;
+  -webkit-transition: background-position-y 0.64s ease 0s, opacity 0.64s ease 0s;
+  transition: background-position-y 0.64s ease 0s, opacity 0.64s ease 0s;
+}
+
+.game-wrapper-wrapper-canvas_borderBottom {
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width: 100%;
+  height: 10px;
+  background-image: url(https://lucky-jet.1play.one/assets/media/9260d14d2c3b763fa9413b242c7a1788.svg);
+  -webkit-animation: 3s linear 0s infinite normal none running huAbwY;
+          animation: 3s linear 0s infinite normal none running huAbwY;
+  border-top: 1px solid #261c4a;
+  background-repeat: repeat-x;
+  background-position-y: 3px;
+}
+
+.game-wrapper-wrapper-canvas_borderLeft {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 10px;
+  height: 100%;
+  background-image: url(https://lucky-jet.1play.one/assets/media/9c9730503131fe326ed94d1d568b7479.svg);
+  -webkit-animation: 3s linear 0s infinite normal none running krObEU;
+          animation: 3s linear 0s infinite normal none running krObEU;
+  border-right: 1px solid #261c4a;
+  background-repeat: repeat-y;
+  background-position-y: 0px;
+}
+
+.game-wrapper-wrapper-canvas-screen {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+}
+
+.game-wrapper-wrapper-canvas-screen-hero {
+  position: absolute;
+  width: 110px;
+  opacity: 1;
+  -webkit-transform: translate(248.256px, 53.4782px);
+          transform: translate(248.256px, 53.4782px);
+}
+
+.game-wrapper-wrapper-canvas-screen-hero-wrapper-hero {
+  position: absolute;
+  width: 75%;
+  margin-top: 44%;
+  margin-left: -71%;
+}
+
+.game-wrapper-wrapper-canvas-screen-hero-wrapper-trace {
+  position: absolute;
+  -webkit-transition: all 0.32s ease 0s;
+  transition: all 0.32s ease 0s;
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  width: 50%;
+}
+
+.game-wrapper-wrapper-score {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  z-index: 2;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  gap: 0px;
+  opacity: 1;
+}
+
+.game-wrapper-wrapper-score_score {
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  display: inline;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 43.2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #944ef5;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  -webkit-animation: 0.7s ease 0s 1 normal none running eeiVJC;
+          animation: 0.7s ease 0s 1 normal none running eeiVJC;
+}
+
+.game-wrapper-wrapper-score_status {
+  pointer-events: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
+  font-family: Rocketfont;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  color: #fafafa;
+  text-shadow: rgba(138, 138, 138, 0.5) 0px 0px 21.9869px;
+  opacity: 0;
+  -webkit-animation: 0.4s ease 0s 1 normal forwards running gEoZNG;
+          animation: 0.4s ease 0s 1 normal forwards running gEoZNG;
+  height: 24px;
+  -webkit-transition: height 0.4s ease 0s;
+  transition: height 0.4s ease 0s;
+}
+/*# sourceMappingURL=style.css.map */
