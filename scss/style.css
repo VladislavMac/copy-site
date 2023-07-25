@@ -544,7 +544,7 @@ body, html {
 }
 
 .bets-wrapper_bet-header-wrapper-auto {
-  width: 50vw;
+  width: 55vw;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,7 +593,7 @@ body, html {
 .bets-wrapper_bet-header-wrapper-auto .auto p {
   padding-left: 2vw;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   color: #fafafa;
 }
 
