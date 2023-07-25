@@ -30,7 +30,9 @@ function betMinus({button}){
     const $input    = $wrapper.querySelector('#input-bet');
     const valueBet  = parseFloat($input.value);
 
-    $input.value = valueBet - 0.1
+    if( valueBet > 0.1 ){
+        $input.value = (valueBet - 0.1).toFixed(1)
+    }
 }
 function betPlus({button}){
     const $wrapper  = button.parentElement.parentElement;
