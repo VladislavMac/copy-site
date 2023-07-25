@@ -6,6 +6,10 @@
   font-family: 'Manrope', sans-serif;
 }
 
+body, html {
+  background-color: #151028;
+}
+
 .header {
   width: 100%;
 }

@@ -7,6 +7,9 @@ $colorText: rgb(250, 250, 250);
     font-family: 'Manrope', sans-serif;
 }
 
+body,html{
+    background-color: #151028;
+}
 .header{
     width: 100%;
 
@@ -395,7 +398,7 @@ $colorText: rgb(250, 250, 250);
     &-wrapper{
         width: 100%;
         height: 100%;
-        
+
         padding: 2vw;
         &_bet{
             width: 100%;
