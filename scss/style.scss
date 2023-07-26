@@ -270,7 +270,6 @@ body,html{
                     height: 100%;
                     background: url(https://lucky-jet.1play.one/assets/media/ff4e62960d80d8105f6ea4eaa979884d.png) 0% 0% / contain repeat-x;
                     background-repeat: repeat-x;
-                    animation: 370370s linear 0s infinite normal none paused gKBsdr;
                 }
                 &_bottom{
                     position: absolute;
@@ -279,8 +278,12 @@ body,html{
                     bottom: -35px;
                     opacity: 1;
                     background: url(https://lucky-jet.1play.one/assets/media/86e9cddf78b8061081ecdae04d9d15e9.svg) 0% / contain repeat-x;
-                    animation: 37037s linear 0s infinite normal none paused gKBsdr;
-                    transition: background-position-y 0.64s ease 0s, opacity 0.64s ease 0s;
+                    animation: bottomMove 10s linear infinite;
+                }
+                @keyframes bottomMove {
+                    100% {
+                      background-position: -250px 0px;
+                    }
                 }
                 &_borderBottom{
                     position: absolute;
@@ -289,10 +292,15 @@ body,html{
                     width: 100%;
                     height: 10px;
                     background-image: url(https://lucky-jet.1play.one/assets/media/9260d14d2c3b763fa9413b242c7a1788.svg);
-                    animation: 3s linear 0s infinite normal none running huAbwY;
                     border-top: 1px solid rgb(38, 28, 74);
                     background-repeat: repeat-x;
                     background-position-y: 3px;
+                    animation: borderMove 10s linear infinite;
+                }
+                @keyframes bottomMove {
+                    100% {
+                      background-position: -250px 0px;
+                    }
                 }
                 &_borderLeft{
                     position: absolute;
@@ -301,10 +309,15 @@ body,html{
                     width: 10px;
                     height: 100%;
                     background-image: url(https://lucky-jet.1play.one/assets/media/9c9730503131fe326ed94d1d568b7479.svg);
-                    animation: 3s linear 0s infinite normal none running krObEU;
                     border-right: 1px solid rgb(38, 28, 74);
                     background-repeat: repeat-y;
                     background-position-y: 0px; 
+                    animation: leftMove 10s linear infinite;
+                }
+                @keyframes leftMove {
+                    100% {
+                      background-position: 0px 250px;
+                    }
                 }
                 &-screen{
                     position: absolute;
@@ -313,24 +326,55 @@ body,html{
                     width: calc(100% - 10px);
                     height: calc(100% - 10px);
                     &-hero{
-                        position: absolute; width: 110px; opacity: 1; transform: translate(248.256px, 53.4782px);
+                        position: absolute;
+                        width: 110px;
+                        opacity: 1;
+
+                        left: -5vw;
+                        top: 15vh;
+                        transition-duration: 1500ms;
+                        animation: heroMove 2s linear infinite;
+
                         &-wrapper{
                             &-hero{
                                 position: absolute;
                                 width: 75%;
-                                margin-top: 44%;
-                                margin-left: -71%;
+                                margin-top: 49%;
+                                margin-left: -20%;
                             }
                             &-trace{
                                 position: absolute;
-                                transition: all 0.32s ease 0s;
-                                transform: rotate(7deg);
                                 width: 50%;
+                                margin-top: 11%;
+                                margin-left: 27%;
                             }
                         }
                     }
-                    // svg{
-
+                    @keyframes heroMove {
+                        0% {
+                            margin-left: 0px;
+                        }
+                        50%{
+                            margin-left: 10px;
+                        }
+                        100% {
+                          margin-left: 0px;
+                        }
+                    }
+                    svg{
+                        width: 382.656px; height: 196.656px;
+                        animation: lineMove 2s linear infinite;
+                    }
+                    // @keyframes lineMove {
+                    //     0% {
+                    //         margin-left: 0px;
+                    //     }
+                    //     50%{
+                    //         margin-left: 10px;
+                    //     }
+                    //     100% {
+                    //         margin-left: 0px;
+                    //     }
                     // }
                 }
             }
@@ -350,27 +394,20 @@ body,html{
                 opacity: 1;
                 &_score{
                     pointer-events: none;
-                    -webkit-font-smoothing: antialiased;
                     box-sizing: inherit;
-                    -webkit-tap-highlight-color: transparent;
                     display: inline;
-                    font-family: Roboto;
-                    font-style: normal;
                     font-size: 36px;
                     line-height: 43.2px;
                     text-align: center;
                     text-transform: uppercase;
                     color: rgb(148, 78, 245);
-                    font-weight: 900;
+                    font-weight: bold;
                     font-variant-numeric: tabular-nums;
                     animation: 0.7s ease 0s 1 normal none running eeiVJC;            
                 }
                 &_status{
                     pointer-events: none;
-                    -webkit-font-smoothing: antialiased;
                     box-sizing: inherit;
-                    -webkit-tap-highlight-color: transparent;
-                    font-family: Rocketfont;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;

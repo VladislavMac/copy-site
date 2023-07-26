@@ -356,8 +356,6 @@ body, html {
   height: 100%;
   background: url(https://lucky-jet.1play.one/assets/media/ff4e62960d80d8105f6ea4eaa979884d.png) 0% 0%/contain repeat-x;
   background-repeat: repeat-x;
-  -webkit-animation: 370370s linear 0s infinite normal none paused gKBsdr;
-          animation: 370370s linear 0s infinite normal none paused gKBsdr;
 }
 
 .game-wrapper-wrapper-canvas_bottom {
@@ -367,10 +365,20 @@ body, html {
   bottom: -35px;
   opacity: 1;
   background: url(https://lucky-jet.1play.one/assets/media/86e9cddf78b8061081ecdae04d9d15e9.svg) 0%/contain repeat-x;
-  -webkit-animation: 37037s linear 0s infinite normal none paused gKBsdr;
-          animation: 37037s linear 0s infinite normal none paused gKBsdr;
-  -webkit-transition: background-position-y 0.64s ease 0s, opacity 0.64s ease 0s;
-  transition: background-position-y 0.64s ease 0s, opacity 0.64s ease 0s;
+  -webkit-animation: bottomMove 10s linear infinite;
+          animation: bottomMove 10s linear infinite;
+}
+
+@-webkit-keyframes bottomMove {
+  100% {
+    background-position: -250px 0px;
+  }
+}
+
+@keyframes bottomMove {
+  100% {
+    background-position: -250px 0px;
+  }
 }
 
 .game-wrapper-wrapper-canvas_borderBottom {
@@ -380,11 +388,17 @@ body, html {
   width: 100%;
   height: 10px;
   background-image: url(https://lucky-jet.1play.one/assets/media/9260d14d2c3b763fa9413b242c7a1788.svg);
-  -webkit-animation: 3s linear 0s infinite normal none running huAbwY;
-          animation: 3s linear 0s infinite normal none running huAbwY;
   border-top: 1px solid #261c4a;
   background-repeat: repeat-x;
   background-position-y: 3px;
+  -webkit-animation: borderMove 10s linear infinite;
+          animation: borderMove 10s linear infinite;
+}
+
+@keyframes bottomMove {
+  100% {
+    background-position: -250px 0px;
+  }
 }
 
 .game-wrapper-wrapper-canvas_borderLeft {
@@ -394,11 +408,23 @@ body, html {
   width: 10px;
   height: 100%;
   background-image: url(https://lucky-jet.1play.one/assets/media/9c9730503131fe326ed94d1d568b7479.svg);
-  -webkit-animation: 3s linear 0s infinite normal none running krObEU;
-          animation: 3s linear 0s infinite normal none running krObEU;
   border-right: 1px solid #261c4a;
   background-repeat: repeat-y;
   background-position-y: 0px;
+  -webkit-animation: leftMove 10s linear infinite;
+          animation: leftMove 10s linear infinite;
+}
+
+@-webkit-keyframes leftMove {
+  100% {
+    background-position: 0px 250px;
+  }
+}
+
+@keyframes leftMove {
+  100% {
+    background-position: 0px 250px;
+  }
 }
 
 .game-wrapper-wrapper-canvas-screen {
@@ -413,24 +439,57 @@ body, html {
   position: absolute;
   width: 110px;
   opacity: 1;
-  -webkit-transform: translate(248.256px, 53.4782px);
-          transform: translate(248.256px, 53.4782px);
+  left: -5vw;
+  top: 15vh;
+  -webkit-transition-duration: 1500ms;
+          transition-duration: 1500ms;
+  -webkit-animation: heroMove 2s linear infinite;
+          animation: heroMove 2s linear infinite;
 }
 
 .game-wrapper-wrapper-canvas-screen-hero-wrapper-hero {
   position: absolute;
   width: 75%;
-  margin-top: 44%;
-  margin-left: -71%;
+  margin-top: 49%;
+  margin-left: -20%;
 }
 
 .game-wrapper-wrapper-canvas-screen-hero-wrapper-trace {
   position: absolute;
-  -webkit-transition: all 0.32s ease 0s;
-  transition: all 0.32s ease 0s;
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
   width: 50%;
+  margin-top: 11%;
+  margin-left: 27%;
+}
+
+@-webkit-keyframes heroMove {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes heroMove {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 10px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+.game-wrapper-wrapper-canvas-screen svg {
+  width: 382.656px;
+  height: 196.656px;
+  -webkit-animation: lineMove 2s linear infinite;
+          animation: lineMove 2s linear infinite;
 }
 
 .game-wrapper-wrapper-score {
@@ -454,19 +513,15 @@ body, html {
 
 .game-wrapper-wrapper-score_score {
   pointer-events: none;
-  -webkit-font-smoothing: antialiased;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  -webkit-tap-highlight-color: transparent;
   display: inline;
-  font-family: Roboto;
-  font-style: normal;
   font-size: 36px;
   line-height: 43.2px;
   text-align: center;
   text-transform: uppercase;
   color: #944ef5;
-  font-weight: 900;
+  font-weight: bold;
   font-variant-numeric: tabular-nums;
   -webkit-animation: 0.7s ease 0s 1 normal none running eeiVJC;
           animation: 0.7s ease 0s 1 normal none running eeiVJC;
@@ -474,11 +529,8 @@ body, html {
 
 .game-wrapper-wrapper-score_status {
   pointer-events: none;
-  -webkit-font-smoothing: antialiased;
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  -webkit-tap-highlight-color: transparent;
-  font-family: Rocketfont;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;

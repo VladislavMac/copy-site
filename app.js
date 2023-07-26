@@ -2,8 +2,7 @@
 
 const $wallet       = document.querySelector('#wallet');
 
-const $hero         = document.querySelector('#hero'),
-      $imgHero      = document.querySelector('#img-hero'),
+const $imgHero      = document.querySelector('#img-hero'),
       $imgTrace     = document.querySelector('#img-trace');
 
 const $line         = document.querySelector('#game-line');
@@ -16,13 +15,30 @@ const $buttonsMinus  = document.querySelectorAll('#button-minus'),
 
 const $buttonsStart = document.querySelectorAll('#button-bet');
 
+function fly(){
+    const $hero  = document.querySelector('#hero');
+
+    const heroX  = $hero.getBoundingClientRect().x,
+          heroY  = $hero.getBoundingClientRect().y;
+
+    let x = 256, y = 50;
+
+    $hero.style.transform = 'rotate(8deg)';
+
+    $hero.style.left = x + 'px';
+    $hero.style.top  = y  + 'px';
+}
+
 function start({button}){
     const $wrapper  = button.parentElement.parentElement;
     const $input    = $wrapper.querySelector('#input-bet');
     const valueBet  = parseFloat($input.value);
 
     if( valueBet >= 0.2 ){
-        console.log(1)
+        fly();
+        setTimeout(() =>{
+            move();
+        }, 200)
     }
 }
 function betMinus({button}){
