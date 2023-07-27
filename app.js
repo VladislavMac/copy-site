@@ -13,20 +13,55 @@ const $score        = document.querySelector('#game-score'),
 const $buttonsMinus  = document.querySelectorAll('#button-minus'),
       $buttonsPlus   = document.querySelectorAll('#button-plus');
 
-const $buttonsStart = document.querySelectorAll('#button-bet');
+const $buttonsStart  = document.querySelectorAll('#button-bet');
+const $screen        = document.querySelector('.game-wrapper-screen');
 
 const $hero  = document.querySelector('#hero');
 
 let key_hero_X = $hero.style.left,
     key_hero_Y = $hero.style.top;
 let key_interval_score;
+let key_interval_line;
 let key_score = 1.00;
 let key_money = 0.0;
-let key_bet;
+let key_bet = 0;
 let key_button_start = [];
 
 // #EA0075 #F222A1
 // #F45F35 #FBB462
+
+function screenEnd(){
+    $screen.style.display = 'none';
+    $screen.querySelector('#line').style.width = '100%';
+
+    key_score = 1.00;
+
+    if( key_bet !== 0 ){
+        key_money = key_money - key_bet;
+        key_button_start.push(button)
+        setMoney()
+        setbuttonGet({button : button});
+    }
+
+    statusSet();    
+    heroFly();
+    scoreStart();
+    lucky();
+}
+
+function screenStart(){
+    const $line = $screen.querySelector('#line');
+    $screen.style.display = 'block';
+    key_interval_line = setInterval(() =>{
+        $line.style.width = ($line.getBoundingClientRect().width.toFixed(0) - 1) + 'px';
+        if( $line.style.width === '0px' ){
+            clearInterval(key_interval_line);
+            screenEnd();    
+        }
+    },30)
+}
+
+screenStart()
 
 function setbuttonGet({button : button}){
     button.style.background = "linear-gradient(263.87deg, #F45F35 0%, #FBB462 100%)"
@@ -99,11 +134,14 @@ function gameEnd(){
         key_button_start.forEach(button =>{
             setbuttonSet({button : button})
         })
-    }, 2000)
+        screenStart()
+    }, 3000)
+
+    key_bet = 0;
 }
 
 function lucky(){
-    let time = {min : 100, max : 100000}
+    let time = {min : 100, max : 10000}
 
     setTimeout(() =>{
         gameEnd();
@@ -119,17 +157,7 @@ function gameStart({button}){
     const $hero  = document.querySelector('#hero');
 
     if( valueBet >= 0.2 && key_money >= 0.2 ){
-        key_score = 1.00;
         key_bet = valueBet;
-        key_money = key_money - key_bet;
-        key_button_start.push(button)
-
-        setMoney()
-        statusSet();    
-        heroFly();
-        scoreStart();
-        lucky();
-        setbuttonGet({button : button});
     }
 }
 

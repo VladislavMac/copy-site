@@ -342,6 +342,7 @@ body, html {
   transition: height 0.32s ease 0s;
   border-radius: 12px;
   background: #151028;
+  position: absolute;
 }
 
 .game-wrapper-wrapper-canvas {
@@ -395,7 +396,13 @@ body, html {
           animation: borderMove 10s linear infinite;
 }
 
-@keyframes bottomMove {
+@-webkit-keyframes borderMove {
+  100% {
+    background-position: -250px 0px;
+  }
+}
+
+@keyframes borderMove {
   100% {
     background-position: -250px 0px;
   }
@@ -541,6 +548,74 @@ body, html {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   height: 24px;
+}
+
+.game-wrapper-screen {
+  position: absolute;
+  z-index: 9999999999999;
+  width: 100%;
+  height: 100%;
+  background: #100C1F;
+  border-radius: 12px;
+}
+
+.game-wrapper-screen-icon {
+  width: 100%;
+  height: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-wrapper-screen-icon img {
+  width: 17vw;
+  height: 17vw;
+}
+
+.game-wrapper-screen-title {
+  width: 100%;
+  height: 20%;
+  text-align: center;
+}
+
+.game-wrapper-screen-title p {
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.game-wrapper-screen-line {
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.game-wrapper-screen-line-line {
+  width: 50%;
+  height: 4px;
+  background-color: #1B1536;
+  border-radius: 20px;
+}
+
+.game-wrapper-screen-line-line_line {
+  width: 100%;
+  height: 100%;
+  background-color: #743EC1;
+  border-radius: 20px;
 }
 
 .bets {
