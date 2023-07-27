@@ -3,11 +3,11 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: 'Manrope', sans-serif;
 }
 
 body, html {
   background-color: #151028;
+  font-family: 'Manrope', sans-serif;
 }
 
 .header {
@@ -519,12 +519,10 @@ body, html {
   font-size: 36px;
   line-height: 43.2px;
   text-align: center;
-  text-transform: uppercase;
   color: #944ef5;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
   font-variant-numeric: tabular-nums;
-  -webkit-animation: 0.7s ease 0s 1 normal none running eeiVJC;
-          animation: 0.7s ease 0s 1 normal none running eeiVJC;
 }
 
 .game-wrapper-wrapper-score_status {
@@ -537,14 +535,12 @@ body, html {
   line-height: 24px;
   letter-spacing: 0em;
   text-transform: uppercase;
+  font-family: 'Mulish', sans-serif;
+  font-weight: bold;
   color: #fafafa;
-  text-shadow: rgba(138, 138, 138, 0.5) 0px 0px 21.9869px;
-  opacity: 0;
-  -webkit-animation: 0.4s ease 0s 1 normal forwards running gEoZNG;
-          animation: 0.4s ease 0s 1 normal forwards running gEoZNG;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
   height: 24px;
-  -webkit-transition: height 0.4s ease 0s;
-  transition: height 0.4s ease 0s;
 }
 
 .bets {
@@ -965,5 +961,16 @@ body, html {
   -webkit-box-shadow: rgba(25, 201, 245, 0.1) 0px 10px 20px, rgba(92, 36, 252, 0.1) 0px 10px 20px, #944ef5 0px -2px 4px inset, rgba(148, 78, 245, 0.6) 0px -8px 8px inset;
           box-shadow: rgba(25, 201, 245, 0.1) 0px 10px 20px, rgba(92, 36, 252, 0.1) 0px 10px 20px, #944ef5 0px -2px 4px inset, rgba(148, 78, 245, 0.6) 0px -8px 8px inset;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bets-wrapper_bet-main-button-content #out-money {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
